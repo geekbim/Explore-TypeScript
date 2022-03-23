@@ -12,3 +12,8 @@ function printName() {
     console.log("this is void function, can't return anything");
 }
 printName();
+function multiply(val1, val2) {
+    return val1 * val2;
+}
+const result = multiply(1, 2);
+console.log(result);
