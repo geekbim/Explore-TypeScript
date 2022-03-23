@@ -16,9 +16,17 @@ function printName(): void {
 printName()
 
 
-
+// argument type
 function multiply(val1: number, val2: number): number {
     return val1 * val2
 }
 const result = multiply(1, 2)
 console.log(result)
+
+
+// function as type
+type Sum = (val1: number, val2: number) => number
+const Add: Sum = (val1: number, val2: number): number => {
+    return val1 + val2
+}
+console.log(Add(1, 1))
