@@ -22,3 +22,9 @@ const Add = (val1, val2) => {
     return val1 + val2;
 };
 console.log(Add(1, 1));
+// default parameter
+const fullName = (first, last = "Gatya") => {
+    return first + " " + last;
+};
+console.log(fullName("Abim"));
+console.log(fullName("Abim", "Dhaneswara"));
