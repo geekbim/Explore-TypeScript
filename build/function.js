@@ -28,3 +28,9 @@ const fullName = (first, last = "Gatya") => {
 };
 console.log(fullName("Abim"));
 console.log(fullName("Abim", "Dhaneswara"));
+// optional parameter
+const getProfile = (name, address) => {
+    return name + " " + address;
+};
+console.log(getProfile("Abim"));
+console.log(getProfile("Abim", "Bekasi"));

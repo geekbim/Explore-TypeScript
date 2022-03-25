@@ -37,3 +37,10 @@ const fullName = (first: string, last: string = "Gatya"): string => {
 }
 console.log(fullName("Abim"))
 console.log(fullName("Abim", "Dhaneswara"))
+
+// optional parameter
+const getProfile = (name:string, address?:string): string => {
+    return name + " " + address
+}
+console.log(getProfile("Abim"))
+console.log(getProfile("Abim", "Bekasi"))
