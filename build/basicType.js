@@ -18,3 +18,7 @@ heroes = ["layla", "balmond", "miya"];
 heroes = true || false || "zilong" || 80;
 heroes = "lesley";
 console.log(heroes);
+// union type
+let phone;
+phone = 6212345;
+phone = "0812345";
