@@ -26,13 +26,19 @@ class Admin extends User {
     read: boolean = true
     write: boolean = true
 
+    // add constructor in child class
+    constructor(public phone: string, name:string) {
+        super(name)
+    }
+
     getRole = (): {read: boolean, write: boolean} => {
         return {read: true, write: true}
     }
 }
 
-let admin = new Admin("Abim")
+let admin = new Admin("088290085962", "Abim")
 console.log(admin)
 console.log(admin.name)
+console.log(admin.phone)
 admin.setName("jarwo")
 console.log(admin.getName())

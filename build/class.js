@@ -23,8 +23,10 @@ let user = new User("Abim");
 console.log(user);
 console.log(user.name);
 class Admin extends User {
-    constructor() {
-        super(...arguments);
+    // add constructor in child class
+    constructor(phone, name) {
+        super(name);
+        this.phone = phone;
         this.read = true;
         this.write = true;
         this.getRole = () => {
@@ -32,8 +34,9 @@ class Admin extends User {
         };
     }
 }
-let admin = new Admin("Abim");
+let admin = new Admin("088290085962", "Abim");
 console.log(admin);
 console.log(admin.name);
+console.log(admin.phone);
 admin.setName("jarwo");
 console.log(admin.getName());
