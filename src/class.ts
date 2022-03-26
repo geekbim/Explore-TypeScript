@@ -26,10 +26,17 @@ class Admin extends User {
     read: boolean = true
     write: boolean = true
     private _email: string
+    static getRoleName: string = "Admin"
 
     // add constructor in child class
     constructor(public phone: string, name:string) {
         super(name)
+    }
+
+    static getTimeNow() {
+        let currentdate = new Date();
+
+        return currentdate.getDate() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getFullYear()+ " " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
     }
 
     getRole = (): {read: boolean, write: boolean} => {
@@ -49,6 +56,12 @@ class Admin extends User {
         return this._email
     }
 }
+
+// call static property and method
+let adminRole = Admin.getRoleName
+console.log(adminRole)
+let adminCreatedAt = Admin.getTimeNow()
+console.log(adminCreatedAt)
 
 let admin = new Admin("088290085962", "Abim")
 console.log(admin)

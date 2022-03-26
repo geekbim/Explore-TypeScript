@@ -33,6 +33,10 @@ class Admin extends User {
             return { read: true, write: true };
         };
     }
+    static getTimeNow() {
+        let currentdate = new Date();
+        return currentdate.getDate() + "-" + (currentdate.getMonth() + 1) + "-" + currentdate.getFullYear() + " " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+    }
     set email(value) {
         if (value.length == 0) {
             this._email = "email is required";
@@ -44,6 +48,12 @@ class Admin extends User {
         return this._email;
     }
 }
+Admin.getRoleName = "Admin";
+// call static property and method
+let adminRole = Admin.getRoleName;
+console.log(adminRole);
+let adminCreatedAt = Admin.getTimeNow();
+console.log(adminCreatedAt);
 let admin = new Admin("088290085962", "Abim");
 console.log(admin);
 console.log(admin.name);
