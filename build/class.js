@@ -33,6 +33,16 @@ class Admin extends User {
             return { read: true, write: true };
         };
     }
+    set email(value) {
+        if (value.length == 0) {
+            this._email = "email is required";
+            return;
+        }
+        this._email = value;
+    }
+    get email() {
+        return this._email;
+    }
 }
 let admin = new Admin("088290085962", "Abim");
 console.log(admin);
@@ -40,3 +50,7 @@ console.log(admin.name);
 console.log(admin.phone);
 admin.setName("jarwo");
 console.log(admin.getName());
+admin.email = "";
+console.log(admin.email);
+admin.email = "manyuabim9@gmail.com";
+console.log(admin.email);

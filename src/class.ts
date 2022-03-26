@@ -25,6 +25,7 @@ console.log(user.name)
 class Admin extends User {
     read: boolean = true
     write: boolean = true
+    private _email: string
 
     // add constructor in child class
     constructor(public phone: string, name:string) {
@@ -34,6 +35,19 @@ class Admin extends User {
     getRole = (): {read: boolean, write: boolean} => {
         return {read: true, write: true}
     }
+
+    set email(value: string) {
+        if (value.length == 0) {
+            this._email = "email is required"
+            return
+        }
+
+        this._email = value
+    }
+
+    get email(): string { 
+        return this._email
+    }
 }
 
 let admin = new Admin("088290085962", "Abim")
@@ -42,3 +56,8 @@ console.log(admin.name)
 console.log(admin.phone)
 admin.setName("jarwo")
 console.log(admin.getName())
+
+admin.email = ""
+console.log(admin.email)
+admin.email = "manyuabim9@gmail.com"
+console.log(admin.email)
