@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "rm -rf build/ && tsc",
     "ts": "rm -rf build/ && tsc -w",
+<<<<<<< HEAD
     "dev": "nodemon ./build/interface.js"
+=======
+    "dev": "nodemon ./build/genericClass.js"
+>>>>>>> a41c62244b953a0a12e56ec261f5579561eae8e7
   },
   "author": "geekbim",
   "license": "ISC",
